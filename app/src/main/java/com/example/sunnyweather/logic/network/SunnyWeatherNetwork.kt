@@ -1,6 +1,5 @@
 package com.example.sunnyweather.logic.network
 
-
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,7 +25,7 @@ object SunnyWeatherNetwork {
                     val body = response.body()
                     if (body != null) continuation.resume(body)
                     else continuation.resumeWithException(
-                        java.lang.RuntimeException("response body is null")
+                        RuntimeException("response body is null")
                     )
                 }
 
